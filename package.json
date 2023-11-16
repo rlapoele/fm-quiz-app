@@ -1,0 +1,25 @@
+{
+  "name": "fm-quiz-app",
+  "version": "1.0.0",
+  "description": "A Frontend Mentor \"Quiz App\" project.",
+  "repository": "https://github.com/rlapoele/fm-quiz-app",
+  "author": "Renaud Lapoële <rlapoele@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "solid-devtools": "^0.27.3",
+    "tailwindcss": "^3.3.5",
+    "vite": "^4.3.9",
+    "vite-plugin-solid": "^2.7.0"
+  },
+  "dependencies": {
+    "solid-js": "^1.7.6"
+  }
+}
