@@ -1,5 +1,123 @@
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./assets/fonts/static/Rubik-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-weight: 300;
+  src: url('./assets/fonts/static/Rubik-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/static/Rubik-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./assets/fonts/static/Rubik-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/static/Rubik-Medium.ttf') format('truetype');
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --fmqa-color-purewhite: 0deg 0% 100%;
+    --fmqa-color-lightgrey: 220deg 38% 97%;
+    --fmqa-color-lightbluish: 216deg 47% 78%;
+    --fmqa-color-shadowgrey: 220deg 29% 66%;
+    --fmqa-color-greynavy: 219deg 13% 44%;
+    --fmqa-color-darknavy: 216deg 25% 25%;
+    --fmqa-color-green: 151deg 70% 50%;
+    --fmqa-color-green-light: 151deg 87% 94%;
+    --fmqa-color-navy: 216deg 27% 32%;
+    --fmqa-color-purple: 277deg 91% 56%;
+    --fmqa-color-purple-light: 276deg 91% 73%;
+    --fmqa-color-purple-lightest: 277deg 100% 95%;
+    --fmqa-color-red: 0deg 82% 63%;
+    --fmqa-color-red-light: 22deg 100% 96%;
+    --fmqa-color-blue: 223deg 100% 59%;
+    --fmqa-color-blue-light: 223deg 100% 96%;
 
+
+    --fmqa-color-pureblack: 0deg 0% 0%;
+
+    --fmqa-opacity-14: 0.14;
+    --fmqa-opacity-50: 0.5;
+    --fmqa-opacity-64: 0.64;
+    --fmqa-opacity-100: 1;
+
+    --fmqa-shadow-size: 0 1rem 2.5rem 0;
+    --fmqa-shadow-subtle-size: .0625rem .0625rem .125rem .0625rem;
+    --fmqa-shadow-subtle-inner-size: .0625rem .0625rem .125rem .0625rem;
+
+    --fmqa-length-0_0625: .0625rem; /* 1px */
+    --fmqa-length-0_125: .125rem; /* 2px */
+    --fmqa-length-0_1875: .1875rem; /* 3px */
+    --fmqa-length-0_25: .25rem; /* 4px */
+    --fmqa-length-0_5: .5rem; /* 8px */
+    --fmqa-length-1: 1rem;
+    --fmqa-length-1_25: 1.25rem;
+    --fmqa-length-1_5: 1.5rem;
+    --fmqa-length-1_75: 1.75rem;
+    --fmqa-length-2: 2rem;
+    --fmqa-length-2_25: 2.25rem;
+    --fmqa-length-2_5: 2.5rem;
+    --fmqa-length-3: 3rem;
+    --fmqa-length-3_5: 3.5rem;
+    --fmqa-length-4: 4rem;
+    --fmqa-length-5: 5rem;
+    --fmqa-length-5_25: 5.25rem;
+    --fmqa-length-8_75: 8.75rem;
+    --fmqa-length-10_25: 10.25rem;
+    --fmqa-length-35_25: 35.25rem;
+
+    --fmqa-radius-0: 0;
+    --fmqa-radius-0_25: .25rem;
+    --fmqa-radius-0_5: .5rem;
+    --fmqa-radius-1_5: 1.5rem;
+    --fmqa-radius-full: 9999rem;
+
+    --fmqa-font-size-display: calc(144rem / 16);
+    --fmqa-font-size-heading-l: calc(64rem / 16);
+    --fmqa-font-size-heading-m: calc(36rem / 16);
+    --fmqa-font-size-heading-s: calc(28rem / 16);
+    --fmqa-font-size-body-m: calc(24rem / 16);
+    --fmqa-font-size-body-s: calc(20rem / 16);
+
+    --fmqa-line-height-100: 100%;
+    --fmqa-line-height-150: 150%;
+
+
+  }
+}
+
+@layer base {
+  :root {
+    @apply font-sans not-italic font-400 w-full h-full;
+  }
+}
+
+@layer components {
+  .c-button--primary {
+    @apply flex justify-center items-center self-stretch p-2; /* gap-0.5 */
+    @apply rounded-1.5 bg-purple text-primary hover:bg-purple-light hover:text-primary;
+    /*@apply shadow shadow-shadow dark:shadow dark:shadow-shadow-dark*/
+    box-shadow: var(--fmqa-shadow-size) hsl(var(--fmqa-color-shadowgrey) / var(--fmqa-opacity-64));
+  }
+}
