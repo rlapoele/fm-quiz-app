@@ -6,3 +6,5 @@ export default function IconHtml() {
   );
 }
 // fill="#FF7E35"
+// use "currentColor" instead so that, potentially, icon can be used with a
+// different color.

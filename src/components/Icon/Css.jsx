@@ -6,3 +6,5 @@ export default function IconCss() {
   );
 }
 
+// use "currentColor" instead of original color so that, potentially, icon can
+// be used with a different color.

@@ -1,6 +1,7 @@
-export default function IconSun() {
+export default function IconSun(props) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg"
+    <svg class={props.class}
+         xmlns="http://www.w3.org/2000/svg"
          width="24"
          height="24"
          fill="none"
@@ -9,3 +10,6 @@ export default function IconSun() {
     </svg>
   );
 }
+
+// use "currentColor" instead of original one so that, potentially, icon can be used with a
+// different color.

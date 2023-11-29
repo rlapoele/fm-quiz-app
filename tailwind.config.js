@@ -4,12 +4,28 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: ['./index.html', './src/**/*.{js,jsx}'],
-  darkMode: ['class', '[data-theme="dark"]'],
+  darkMode: ['class','[data-theme="dark"]'],
   theme: {
+    backgroundImage: {
+      'img-sm': 'var(--fmqa-bg-img-sm)',
+      'img-sm-dark': 'var(--fmqa-bg-img-sm-dark)',
+      'img-md': 'var(--fmqa-bg-img-md)',
+      'img-md-dark': 'var(--fmqa-bg-img-md-dark)',
+      'img-lg': 'var(--fmqa-bg-img-lg)',
+      'img-lg-dark': 'var(--fmqa-bg-img-lg-dark)'
+    },
+    borderWidth: {
+      '0': '0',
+      '0.0625': 'var(--fmqa-length-0_0625)',
+      '0.125': 'var(--fmqa-length-0_125)',
+      '0.1875': 'var(--fmqa-length-0_1875)',
+      '0.25': 'var(--fmqa-length-0_25)',
+    },
     borderRadius: {
       'none': 'var(--fmqa-radius-0)',
       '0.25': 'var(--fmqa-radius-0_25)',
       '0.5': 'var(--fmqa-radius-0_5)',
+      '0.75': 'var(--fmqa-radius-0_75)',
       '1.5': 'var(--fmqa-radius-1_5)',
       'full': 'var(--fmqa-radius-full)'
     },
@@ -48,9 +64,15 @@ module.exports = {
       'sans': ['Rubik', ...defaultTheme.fontFamily.sans],
     },
     fontSize: {
+      'display-sm': ['var(--fmqa-font-size-display-sm)','var(--fmqa-line-height-100)'],
+      'heading-l-sm': ['var(--fmqa-font-size-heading-l-sm)','var(--fmqa-line-height-100)'],
+      'heading-m-sm': ['var(--fmqa-font-size-heading-m-sm)','var(--fmqa-line-height-120)'],
+      'heading-s-sm': ['var(--fmqa-font-size-heading-s-sm)','var(--fmqa-line-height-100)'],
+      'body-m-sm': ['var(--fmqa-font-size-body-m-sm)','var(--fmqa-line-height-100)'],
+      'body-s-sm': ['var(--fmqa-font-size-body-s-sm)','var(--fmqa-line-height-150)'],
       'display': ['var(--fmqa-font-size-display)','var(--fmqa-line-height-100)'],
       'heading-l': ['var(--fmqa-font-size-heading-l)','var(--fmqa-line-height-100)'],
-      'heading-m': ['var(--fmqa-font-size-heading-m)','var(--fmqa-line-height-100)'],
+      'heading-m': ['var(--fmqa-font-size-heading-m)','var(--fmqa-line-height-120)'],
       'heading-s': ['var(--fmqa-font-size-heading-s)','var(--fmqa-line-height-100)'],
       'body-m': ['var(--fmqa-font-size-body-m)','var(--fmqa-line-height-150)'],
       'body-s': ['var(--fmqa-font-size-body-s)','var(--fmqa-line-height-150)'],
@@ -76,7 +98,7 @@ module.exports = {
       '0.25': 'var(--fmqa-length-0_25)',
     },
     screens: {
-      'sm': '576px',
+      'sm': '375px',
       'md': '768px',
       'lg': '1440px',
     },
@@ -85,8 +107,13 @@ module.exports = {
       '0.125': 'var(--fmqa-length-0_125)',
       '0.1875': 'var(--fmqa-length-0_1875)',
       '0.25': 'var(--fmqa-length-0_25)',
+      '0.375': 'var(--fmqa-length-0_375)',
       '0.5': 'var(--fmqa-length-0_5)',
+      '0.75': 'var(--fmqa-length-0_75)',
+      '0.9375': 'var(--fmqa-length-0_9375)',
       '1': 'var(--fmqa-length-1)',
+      '1.125': 'var(--fmqa-length-1_125)',
+      '1.1875': 'var(--fmqa-length-1_1875)',
       '1.25': 'var(--fmqa-length-1_25)',
       '1.5': 'var(--fmqa-length-1_5)',
       '1.75': 'var(--fmqa-length-1_75)',
@@ -100,6 +127,9 @@ module.exports = {
       '5.25': 'var(--fmqa-length-5_25)',
       '8.75': 'var(--fmqa-length-8_75)',
       '10.25': 'var(--fmqa-length-10_25)',
+      '11.25': 'var(--fmqa-length-11_25)',
+      '28.25': 'var(--fmqa-length-28_25)',
+      '29': 'var(--fmqa-length-29)',
       '35.25': 'var(--fmqa-length-35_25)',
       'full': '100%'
     },

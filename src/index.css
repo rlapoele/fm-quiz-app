@@ -1,3 +1,4 @@
+/* Font declarations */
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
@@ -10,7 +11,6 @@
   font-weight: 300;
   src: url('./assets/fonts/static/Rubik-LightItalic.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
@@ -30,11 +30,12 @@
   src: url('./assets/fonts/static/Rubik-Medium.ttf') format('truetype');
 }
 
-
+/* default tailwind layers */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* design tokens & root defaults */
 @layer base {
   :root {
     --fmqa-color-purewhite: 0deg 0% 100%;
@@ -54,7 +55,6 @@
     --fmqa-color-blue: 223deg 100% 59%;
     --fmqa-color-blue-light: 223deg 100% 96%;
 
-
     --fmqa-color-pureblack: 0deg 0% 0%;
 
     --fmqa-opacity-14: 0.14;
@@ -64,14 +64,18 @@
 
     --fmqa-shadow-size: 0 1rem 2.5rem 0;
     --fmqa-shadow-subtle-size: .0625rem .0625rem .125rem .0625rem;
-    --fmqa-shadow-subtle-inner-size: .0625rem .0625rem .125rem .0625rem;
 
     --fmqa-length-0_0625: .0625rem; /* 1px */
     --fmqa-length-0_125: .125rem; /* 2px */
     --fmqa-length-0_1875: .1875rem; /* 3px */
     --fmqa-length-0_25: .25rem; /* 4px */
+    --fmqa-length-0_375: .375rem; /* 6px */
     --fmqa-length-0_5: .5rem; /* 8px */
-    --fmqa-length-1: 1rem;
+    --fmqa-length-0_75: .75rem; /* 12px */
+    --fmqa-length-0_9375: .9375rem; /* 15px */
+    --fmqa-length-1: 1rem; /* 16px */
+    --fmqa-length-1_125: 1.125rem; /* 18px */
+    --fmqa-length-1_1875: 1.1875rem; /* */
     --fmqa-length-1_25: 1.25rem;
     --fmqa-length-1_5: 1.5rem;
     --fmqa-length-1_75: 1.75rem;
@@ -85,13 +89,25 @@
     --fmqa-length-5_25: 5.25rem;
     --fmqa-length-8_75: 8.75rem;
     --fmqa-length-10_25: 10.25rem;
+    --fmqa-length-11_25: 11.25rem;
+    --fmqa-length-28_25: 28.25rem;
+    --fmqa-length-29: 29rem;
     --fmqa-length-35_25: 35.25rem;
 
     --fmqa-radius-0: 0;
     --fmqa-radius-0_25: .25rem;
     --fmqa-radius-0_5: .5rem;
+    --fmqa-radius-0_75: .75rem;
     --fmqa-radius-1_5: 1.5rem;
     --fmqa-radius-full: 9999rem;
+
+    --fmqa-font-size-display-sm: calc(88rem / 16);
+    --fmqa-font-size-heading-l-sm: calc(40rem / 16);
+    --fmqa-font-size-heading-m-sm: calc(20rem / 16);
+    --fmqa-font-size-heading-s-sm: calc(18rem / 16);
+    --fmqa-font-size-body-m-sm: calc(18rem / 16);
+    --fmqa-font-size-body-s-sm: calc(14rem / 16);
+
 
     --fmqa-font-size-display: calc(144rem / 16);
     --fmqa-font-size-heading-l: calc(64rem / 16);
@@ -101,23 +117,19 @@
     --fmqa-font-size-body-s: calc(20rem / 16);
 
     --fmqa-line-height-100: 100%;
+    --fmqa-line-height-120: 120%;
     --fmqa-line-height-150: 150%;
 
-
+    --fmqa-bg-img-sm: url("./assets/images/pattern-background-mobile-light.svg");
+    --fmqa-bg-img-sm-dark: url("./assets/images/pattern-background-mobile-dark.svg");
+    --fmqa-bg-img-md: url("./assets/images/pattern-background-tablet-light.svg");
+    --fmqa-bg-img-md-dark: url("./assets/images/pattern-background-tablet-dark.svg");
+    --fmqa-bg-img-lg: url("./assets/images/pattern-background-desktop-light.svg");
+    --fmqa-bg-img-lg-dark: url("./assets/images/pattern-background-desktop-dark.svg");
   }
-}
 
-@layer base {
   :root {
     @apply font-sans not-italic font-400 w-full h-full;
   }
-}
 
-@layer components {
-  .c-button--primary {
-    @apply flex justify-center items-center self-stretch p-2; /* gap-0.5 */
-    @apply rounded-1.5 bg-purple text-primary hover:bg-purple-light hover:text-primary;
-    /*@apply shadow shadow-shadow dark:shadow dark:shadow-shadow-dark*/
-    box-shadow: var(--fmqa-shadow-size) hsl(var(--fmqa-color-shadowgrey) / var(--fmqa-opacity-64));
-  }
 }

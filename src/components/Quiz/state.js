@@ -7,7 +7,6 @@ const PLAYER_QUIZ_ANSWERS_DEFAULT = [];
 const HAS_ERROR_DEFAULT = false;
 
 const quizzes = defaultQuizzes.quizzes;
-export const quizTitles = quizzes.map(quiz => quiz.title);
 export const quizCatalog = quizzes.map(quiz => { return { title: quiz.title, icon: quiz.icon }});
 
 const [getSelectedQuiz, setSelectedQuiz] = createSignal(SELECTED_QUIZ_DEFAULT);
@@ -32,6 +31,8 @@ export const getSelectedQuizIcon = createMemo(() => isQuizSelected() ? getSelect
 export const getSelectedQuizQuestions = createMemo(() => isQuizSelected() ? getSelectedQuiz().questions : []);
 
 export const hasSelectedQuizMoreQuestion = createMemo(() => selectedQuizCurrentQuestionIndex() < getSelectedQuizQuestions().length);
+
+export const isSelectedQuizCurrentQuestionLast = createMemo(() => selectedQuizCurrentQuestionIndex() === (getSelectedQuizQuestions().length - 1));
 export const getSelectedQuizCurrentQuestion = createMemo(() => isQuizSelected() && hasSelectedQuizMoreQuestion() ? getSelectedQuizQuestions()[selectedQuizCurrentQuestionIndex()]: null);
 export const getSelectedQuizCurrentQuestionText = createMemo(() => isQuizSelected()  && hasSelectedQuizMoreQuestion() ? getSelectedQuizCurrentQuestion().question: '');
 export const getSelectedQuizCurrentQuestionProposedAnswers = createMemo(() => isQuizSelected() && hasSelectedQuizMoreQuestion() ? getSelectedQuizCurrentQuestion().options : []);
@@ -79,8 +80,6 @@ export const getNextQuestion = () => {
     setSelectedQuizCurrentQuestionIndex(selectedQuizCurrentQuestionIndex() + 1);
   }
 }
-
-
 export const getSelectedQuizScore = createMemo(
   () => playerQuizAnswers().reduce((score, quizAnswer) => quizAnswer.givenAnswerText === quizAnswer.validAnswerText ? score + 1 : score ,0)
 );

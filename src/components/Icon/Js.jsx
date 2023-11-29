@@ -7,3 +7,5 @@ export default function IconJs() {
 }
 
 // fill="#306AFF"
+// use "currentColor" instead so that, potentially, icon can be used with a
+// different color.

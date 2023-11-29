@@ -7,3 +7,5 @@ export default function IconA11y() {
 }
 
 // fill="#A729F5"
+// use "currentColor" instead so that, potentially, icon can be used with a
+// different color.
