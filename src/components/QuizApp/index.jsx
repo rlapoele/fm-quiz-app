@@ -3,7 +3,7 @@ import {getSelectedQuizIcon, getSelectedQuizTitle, isQuizSelected, Quiz} from ".
 import QuizIconTitle from "../Quiz/components/IconTitle";
 import ThemeSelector from "../ThemeSelector";
 
-function QuizApp() {
+export default function QuizApp() {
   return (
     <>
       <header class="flex justify-between px-1.5 py-1 md:px-4 md:py-2.5 lg:px-8.75 lg:py-5.25">
@@ -18,6 +18,5 @@ function QuizApp() {
     </>
   );
 }
-export default QuizApp;
 
-// h-2.5 md:h-3.5
+

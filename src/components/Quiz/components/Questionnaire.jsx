@@ -6,14 +6,18 @@ import {
   getNextQuestion,
   getSelectedQuizCurrentQuestionNumber,
   getSelectedQuizCurrentQuestionProposedAnswers,
-  getSelectedQuizCurrentQuestionText, getSelectedQuizCurrentQuestionValidAnswer,
+  getSelectedQuizCurrentQuestionText,
+  getSelectedQuizCurrentQuestionValidAnswer,
   getSelectedQuizProgressPercentage,
-  getSelectedQuizQuestions, hasQuizError, isSelectedQuizCurrentQuestionLast,
+  getSelectedQuizQuestions,
+  hasQuizError,
+  isSelectedQuizCurrentQuestionLast,
   validateQuestionAnswer,
 } from "../state";
 import ProgressIndicator from "./ProgressIndicator";
 import IconIncorrect from "../../Icon/Incorrect";
 import IconCorrect from "../../Icon/Correct";
+
 export default function QuizQuestionnaire() {
   const questionAnswerLetters = ['A','B','C','D','E','F','G','H','I','J'];
   return (
