@@ -28,7 +28,7 @@ Overall, I'm happy with this first version even though it can definitely be impr
 
 I've implemented this using [#vite](https://vitejs.dev/), [#solidjs](https://www.solidjs.com/) and [#tailwindcss](https://tailwindcss.com/).
 
-I was already quite familiar with vite and tailwindcss but not so much with solidjs; this has therefore been a really nice opportunity for me to learn more about some of solid's features.
+I was already familiar with vite and tailwindcss but not so much with solidjs; this has therefore been a really nice opportunity for me to learn more about some of solid's features.
 
 I really liked using solidjs and I found it much simpler (and better I think) to use than react or even vue.
 
