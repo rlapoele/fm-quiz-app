@@ -12,7 +12,7 @@ export default function QuizApp() {
         </Show>
         <ThemeSelector />
       </header>
-      <main class="px-1.5 pt-2 md:px-4 lg:px-8.75">
+      <main class="px-1.5 md:px-4 lg:px-8.75">
         <Quiz/>
       </main>
     </>

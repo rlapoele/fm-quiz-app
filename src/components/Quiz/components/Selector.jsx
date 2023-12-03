@@ -9,8 +9,8 @@ export default function QuizSelector() {
 
       <header class="w-full lg:w-auto">
         <h1 class="mb-1 lg:mb-3 text-heading-l-sm md:text-heading-l text-primary-contrast dark:text-secondary-contrast-dark">
-          <p class="mb-0.5 font-300">Welcome to the</p>
-          <p class="font-700">Frontend Quiz!</p>
+          <span class="block mb-0.5 font-300">Welcome to the</span>
+          <span class="block font-500">Frontend Quiz!</span>
         </h1>
         <p class="animate-pulse italic font-300 text-body-s-sm md:text-body-s text-secondary-contrast dark:text-primary-contrast-dark">Pick a subject to get started.</p>
       </header>

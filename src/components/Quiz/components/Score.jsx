@@ -1,5 +1,6 @@
 import {
-  getSelectedQuizIcon, getSelectedQuizQuestions,
+  getSelectedQuizIcon,
+  getSelectedQuizQuestions,
   getSelectedQuizScore,
   getSelectedQuizTitle,
   resetQuiz
@@ -8,12 +9,12 @@ import QuizIconTitle from "./IconTitle";
 export default function QuizScore() {
   return (
     <>
-      <section class="mb-4 flex flex-wrap items-start gap-2.5 md:gap-4 lg:gap-0 lg:flex-nowrap">
+      <section class="mb-4 flex flex-wrap items-start justify-between gap-2.5 md:gap-4 lg:gap-0 lg:flex-nowrap">
 
         <header class="w-full lg:w-auto">
           <h1 class="mb-1 lg:mb-3 text-heading-l-sm md:text-heading-l text-primary-contrast dark:text-secondary-contrast-dark">
-            <p class="mb-0.5 font-300">Quiz completed</p>
-            <p class="font-500">You scored...</p>
+            <span class="block mb-0.5 font-300">Quiz completed</span>
+            <span class="block font-500">You scored...</span>
           </h1>
         </header>
 
