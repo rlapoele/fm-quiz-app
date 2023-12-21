@@ -22,9 +22,11 @@ _Your users should be able to:_
 - _Navigate the entire app only using their keyboard_
 - _**Bonus:** Change the app's theme between light and dark_
 
-Most of these requirements have been met with the exception of the keyboard navigation which probably needs more work.
+Most of these requirements have been met except the keyboard navigation which probably needs more work.
 The accessibility also requires additional work.
 Overall, I'm happy with this first version even though it can definitely be improved upon.
+
+The solution I implemented is available [here](https://rlapoele.github.io/fm-quiz-app/).
 
 I've implemented this using [#vite](https://vitejs.dev/), [#solidjs](https://www.solidjs.com/) and [#tailwindcss](https://tailwindcss.com/).
 
